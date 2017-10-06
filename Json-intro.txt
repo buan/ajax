@@ -1,0 +1,22 @@
+JSON=
+1)Javascript Object Notation
+2)Subset of javascript
+3) Can be parsed with any framweworks
+4)we can use a)numbers b)string c)boolean d) array e)objects f)null
+
+Syntax Rules:
+1)Use key value pairs:{"name:"Soumya"}//need double quotes
+2)file type.json
+3)name=key/Soumya=value
+
+eg:
+{
+"name":"Soumya Banerjee",
+"age":35,
+"address":
+{
+"street":"jadunath Sarkar",
+"city":"Kolkata"
+},
+"languages":["php","java"]
+}

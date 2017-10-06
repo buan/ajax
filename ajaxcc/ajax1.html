@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<button id="clickme">Click</button>
+</body>
+
+<script>
+	//Create event listener
+	document.getElementById("clickme").addEventListener("click",loadText)
+	function loadText()
+	{
+		//console.log("button clicked");
+		
+		//create XHR object
+		var xhr=new XMLHttpRequest();
+		
+		//OPEN-type,url/file,async
+		xhr.open('GET','sampletext.txt',true);
+		
+		//function to perform on onload
+		xhr.onload=function(){
+			if(this.status==200)//200 is for status 'OK'
+				{
+					console.log(this.responseText);//logs the text from ajax
+				}
+		}
+		
+		xhr.send();
+		/*HTTP status codes
+		200=OK
+		404=NOT Found
+		403=forbidden
+		*/
+		
+	}
+</script>
+</html>

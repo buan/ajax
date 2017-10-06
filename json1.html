@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	#experts
+		{
+			display: grid;
+			grid-template-columns: 1fr 1fr 1fr;
+		}
+		#experts div:nth-child(odd)
+		{
+			background: pink;
+			height: 100px;
+		}
+		
+		#experts div:nth-child(even)
+		{
+			background: green;
+			height: 100px;
+		}
+		#experts>div:nth-child(1)
+		{
+			display: grid;
+			grid-template-columns: 1fr 2fr 1fr;
+			grid-gap: 1em;
+			/*border: 1px solid black;*/
+			background: white;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<ul id="show">
+	</ul>
+	
+</body>
+
+<script>
+	var person=
+	{
+	"name":	"stuti",
+	"age":"20",
+	"street":
+		{
+			"city":"kolkata",
+			"state":"WestBengal",
+		},
+	"brothers":["Ayush","Rahul"],
+	"email"	:function(){
+		return "abc@gmail.com"
+	}
+	}
+	
+	
+	console.log(person.name);
+	console.log(person.age)
+	console.log(person.street.state)
+	console.log(person.brothers[1])
+	console.log(person.email());
+	
+	
+	var person1=
+	{
+	name:"stuti",
+	age:"20",
+	street:
+		{
+			"city":"kolkata",
+			"state":"WestBengal",
+		},
+	brothers:["Ayush","Rahul"],
+	email:function(){
+		return "abc@gmail.com"
+	}
+	}
+	
+	person1=JSON.stringify(person1);
+	console.log(person1);
+	person1=JSON.parse(person1);
+	console.log(person1.name);
+	
+	
+	var person2=[
+		{
+	name:"Amit",
+	age:"20",
+	street:
+		{
+			"city":"kolkata",
+			"state":"WestBengal",
+		},
+	brothers:["Ayush","Rahul"],
+	email:function(){
+		return "abc@gmail.com"
+	}
+		},
+		
+		{
+	name:"Suman",
+	age:"20",
+	street:
+		{
+			"city":"kolkata",
+			"state":"WestBengal",
+		},
+	brothers:["Ayush","Rahul"],
+	email:function(){
+		return "abc@gmail.com"
+	}
+		},
+		
+		{
+	name:"Stuti",
+	age:"20",
+	street:
+		{
+			"city":"kolkata",
+			"state":"WestBengal",
+		},
+	brothers:["Ayush","Rahul"],
+	email:function(){
+		return "abc@gmail.com"
+	}
+		}
+		
+	]
+	
+	console.log(person2[0]);//fetch first object
+	console.log(person2[0].name);//fetch first name
+	var output="";
+	for(i=0;i<person2.length;i++)
+		{
+			//console.log("Name="+person2[i].name);
+			var output=output+"<li>"+person2[i].name+"</li>";
+		}
+	
+	document.getElementById("show").innerHTML=output;
+</script>
+
+<div id="experts">
+	
+	<div>
+	<div>Expert a</div>
+	<div>Expert b</div>
+	<div>Expert c</div>
+		
+	
+	
+	
+	</div>
+	<div>Expert2</div>
+	<div>Expert3</div>
+	<div>Expert4</div>
+</div>
+
+</html>

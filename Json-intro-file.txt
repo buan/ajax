@@ -1,0 +1,105 @@
+1)This is a json String and we can access it like this
+
+	var person=
+	{
+	"name":	"stuti",
+	"age":"20",
+	"street":
+		{
+			"city":"kolkata",
+			"state":"WestBengal",
+		},
+	"brothers":["Ayush","Rahul"],
+	"email"	:function(){
+		return "abc@gmail.com"
+	}
+	}
+	console.log(person.name);//access name
+	console.log(person.age)//access age
+	console.log(person.street.state)//access state
+	console.log(person.brothers[1])//access array
+	console.log(person.email());//access function
+	
+	2)to convert a javascript to json
+	var person1=
+	{
+	name:"stuti",
+	age:"20",
+	street:
+		{
+			"city":"kolkata",
+			"state":"WestBengal",
+		},
+	brothers:["Ayush","Rahul"],
+	email:function(){
+		return "abc@gmail.com"
+	}
+	}
+	
+	//convert javascript object to json
+	
+	person1=JSON.stringify(person1);
+	console.log(person1);
+	
+	//to access each field it we parse it
+	
+	person1=JSON.parse(person1);
+	console.log(person1.name);
+	
+	3)Accessing multiple json values
+	var person2=[
+		{
+	name:"Amit",
+	age:"20",
+	street:
+		{
+			"city":"kolkata",
+			"state":"WestBengal",
+		},
+	brothers:["Ayush","Rahul"],
+	email:function(){
+		return "abc@gmail.com"
+	}
+		},
+		
+		{
+	name:"Suman",
+	age:"20",
+	street:
+		{
+			"city":"kolkata",
+			"state":"WestBengal",
+		},
+	brothers:["Ayush","Rahul"],
+	email:function(){
+		return "abc@gmail.com"
+	}
+		},
+		
+		{
+	name:"Stuti",
+	age:"20",
+	street:
+		{
+			"city":"kolkata",
+			"state":"WestBengal",
+		},
+	brothers:["Ayush","Rahul"],
+	email:function(){
+		return "abc@gmail.com"
+	}
+		}
+		
+	]
+	
+	console.log(person2[0]);//fetch first object
+	console.log(person2[0].name);//fetch first name
+	var output="";
+	for(i=0;i<person2.length;i++)
+		{
+			//console.log("Name="+person2[i].name);
+			var output=output+"<li>"+person2[i].name+"</li>";
+		}
+	
+	document.getElementById("show").innerHTML=output;
+	

@@ -1,0 +1,44 @@
+var person2=[
+		{
+	"name":"Amit",
+	"age":"20",
+	"street":
+		{
+			"city":"kolkata",
+			"state":"WestBengal"
+		},
+	"brothers":["Ayush","Rahul"],
+	"email":function(){
+		return "abc@gmail.com"
+	}
+		},
+		
+		{
+	name:"Suman",
+	"age":"20",
+	"street":
+		{
+			"city":"kolkata",
+			"state":"WestBengal"
+		},
+	"brothers":["Ayush","Rahul"],
+	"email":function(){
+		return "abc@gmail.com"
+	}
+		},
+		
+		{
+	"name":"Stuti",
+	"age":"20",
+	"street":
+		{
+			"city":"kolkata",
+			"state":"WestBengal"
+		},
+	"brothers":["Ayush","Rahul"],
+	"email":function(){
+		return "abc@gmail.com"
+	}
+		}
+		
+	]
