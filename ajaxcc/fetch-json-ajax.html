@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Get User</h1>
+    <button id="user">Click</button>
+    <div id="showuser"></div>
+    <h1>Get Users</h1>
+    <button id="users">Click</button>
+    <div id="showusers"></div>
+</body>
+    <script>
+        //Load Single User
+        document.querySelector("#user").addEventListener("click",getuser);
+        function getuser()
+        {
+            var xhr=new XMLHttpRequest();
+            xhr.open("GET","person.json","TRUE");
+            xhr.onload=function(){
+                if(this.status==200)
+                    {
+                        var result=JSON.parse(this.responseText);
+                        var output="";
+                        output=output+
+                            "<ul><li>Name is"+result.name+
+                            "</li><li>Age is"+result.age+
+                            "</li><li>Brothers are "+result.brothers[0]+
+                            " and "+result.brothers[1]+
+                            "</ul>";
+                        document.getElementById("showuser").innerHTML=output;
+                    }
+            }
+            
+            xhr.send();
+            
+        }
+        
+        
+        //Load Multiple Users
+         document.querySelector("#users").addEventListener("click",getusers);
+        function getusers()
+        {
+            var xhr=new XMLHttpRequest();
+            xhr.open("GET","people.json","TRUE");
+            xhr.onload=function(){
+                if(this.status==200)
+                    {
+                       
+                        var result=JSON.parse(this.responseText);
+                        var output="";
+                        var i=0;
+                        while(i<result.length){
+                           output=output+
+                            "<ul><li>Name is"+result[i].name+
+                            "</li><li>Age is"+result[i].age+
+                            "</li><li>Brothers are "+result[i].brothers[0]+
+                            " and "+result[i].brothers[1]+
+                            "</ul>";  
+                        }
+                       //console.log(output);
+                        document.getElementById("showusers").innerHTML=output;
+                    }
+            }
+            
+            xhr.send();
+            
+        }
+        
+    </script>
+</html>

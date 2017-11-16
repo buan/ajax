@@ -7,24 +7,18 @@
 			"city":"kolkata",
 			"state":"WestBengal"
 		},
-	"brothers":["Ayush","Rahul"],
-	"email":function(){
-		return "abc@gmail.com"
-	}
+	"brothers":["Ayush","Rahul"]
 		},
 		
 		{
-	name:"Suman",
+	"name":"Suman",
 	"age":"20",
 	"street":
 		{
 			"city":"kolkata",
 			"state":"WestBengal"
 		},
-	"brothers":["Ayush","Rahul"],
-	"email":function(){
-		return "abc@gmail.com"
-	}
+	"brothers":["Ayush","Rahul"]
 		},
 		
 		{
@@ -35,10 +29,7 @@
 			"city":"kolkata",
 			"state":"WestBengal"
 		},
-	"brothers":["Ayush","Rahul"],
-	"email":function(){
-		return "abc@gmail.com"
-	}
+	"brothers":["Ayush","Rahul"]
 		}
 		
 	]
