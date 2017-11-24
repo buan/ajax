@@ -1,0 +1,10 @@
+{
+	"name":"Amit",
+	"age":"20",
+	"street":
+		{
+			"city":"kolkata",
+			"state":"WestBengal"
+		},
+	"brothers":["Ayush","Rahul"]
+		}
