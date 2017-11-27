@@ -31,6 +31,7 @@
 		xhr.onload=function(){
 			if(this.status=200){
 				console.log(this.responseText);
+				
 			}
 		}
 		xhr.send("name2="+document.getElementById('name4').value);
